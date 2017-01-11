@@ -3,6 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import Session from './Session';
 
+const session = {
+  title: 'React Everywhere',
+  abstract: 'Yarn is slow',
+  speakers: [{
+    firstName: 'Idont',
+    lastName: 'Testmyshit'
+  }]
+}
+
 class App extends Component {
   render() {
     return (
@@ -11,14 +20,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Codemash</h2>
         </div>
-        <Session
-          title="7 Languages in 7 Hours"
-          abstract="Prepare for the firestorm!"
-        />
-        <Session
-          title="React Everywhere"
-          abstract="yarn is slow"
-        />
+        <Session {...session} />
       </div>
     );
   }
